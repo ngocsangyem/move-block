@@ -1,0 +1,77 @@
+
+
+.container
+  padding-right: 15px
+  padding-left: 15px
+  width: 100%
+  height: 250px
+.block-move
+  height: 250px
+  background-color: #f0932b
+  width: 50%
+  margin-right: auto
+  margin-left: auto
+  position: absolute
+  input
+    height: 100%
+    width: 100%
+    font-size: 4rem
+    padding: 1rem
+    color: #ffffff
+  &.block-move-x-right
+    right: 70px
+  &.block-move-x-left
+    left: 70px
+  &.block-move-x-center
+    left: 50%
+    transform: translate(-50%)
+  &.block-move-y-top
+    top: 100px
+  &.block-move-y-center
+    top: 50%
+    transform: translateY(-50%)
+    &.block-move-x-center
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+  &.block-move-y-bottom
+    bottom: 100px
+  .btn, input
+    background-color: transparent
+    border: none
+    display: block
+    &:focus
+      outline: none
+  .btn
+    height: 50px
+    width: 50px
+    line-height: 55px
+    padding: 0
+    border-radius: 50%
+    background-color: #ffbe76
+    color: #ffffff
+    font-size: 20px
+    cursor: pointer
+    position: absolute
+    margin: 5px
+    text-align: center
+    @media (min-width: 992px)
+      transition: background-color .3s ease-in-out
+      &:hover
+        background-color: #f0932b
+    span
+      pointer-events: none
+    &-right, &-left
+      top: 50%
+      transform: translateY(-50%)
+    &-right
+      left: 100%
+    &-left
+      right: 100%
+    &-up, &-bottom
+      left: 50%
+      transform: translateX(-50%)
+    &-bottom
+      top: 100%
+    &-up
+      bottom: 100%
